@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blazi: #DE634A;
+    --swampert: #77A8D1;
+    --water: #51A8FF;
+    --ground: #E2C56E;
+    --fire: #FF6043;
+    --fighting: #C56E60;
+}
+
+body {
+    background-color:gray;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 10vh 10vw;
+}
+
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: min-content;
+    margin: 1vh 1vw;
+    padding: 1vh 1vw;
+    background-color: rgb(182, 182, 182);
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.500);
+
+}
+.flex-item.swampert:hover {
+    box-shadow: 0px 0px 5px 1px var(--swampert);
+}
+.flex-item.blazi:hover {
+    box-shadow: 0px 0px 5px 1px var(--blazi);
+}
+
+/* Nome dos pokemon's */
+.flex-name {
+    display: flex;
+    font-size: 70%;
+    text-align: center;
+    padding: 1vh 1vw;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.flex-name.swampert {
+    background-color: var(--swampert);
+}
+.flex-name.blazi {
+    background-color: var(--blazi);
+}
+
+/* Imagem/GIF do pokemon */
+.flex-img {
+    display: flex;
+    max-width: max-content;
+}
+
+.flex-img>img {
+    width: 20vh;
+}
+
+/* Botão da mega evolução */
+.flex-mega {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, #FD8ACF 0%, #CA81F7 10%, #767CF4 25%, #78EAF4 50%, #5BD372 75%, #D6E178 100%);
+    border: 5px solid #494748;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 5px black;
+    cursor: pointer;
+}
+.flex-mega>img {
+    width: 50%;
+}
+
+/* Tipo do pokemon */
+.flex-type {
+    display: flex;
+    justify-content: space-around;
+    margin: 1vh 1vw;
+    
+}
+.flex-type :first-child{
+    margin: 0vh 0vw 0vh 0vw;
+    padding: 1vh 1vw;
+    border: 1px solid rgba(0, 0, 0, 0.400);
+    border-radius: 10px;
+}
+.flex-type :last-child{
+    margin: 0vh 0vw 0vh 1vw;
+    padding: 1vh 1vw;
+    background-color: #C56E60;
+    border: 1px solid rgba(0, 0, 0, 0.400);
+    border-radius: 10px;
+}
+.flex-type > .water {
+    background-color: var(--water);
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}
+.flex-type > .fire {
+    background-color: var(--fire);
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}
+.flex-type > .ground {
+    background-color: var(--ground);
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}
+.flex-type > .fighting {
+    background-color: var(--fighting);
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}
+
+/* Descrição */
+.flex-description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+.flex-description > p {
+    margin: 1vh 0vw 0vh 0vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Destaque do tipo na descrição */
+#water {
+    color: #0080FF;
+    text-shadow: 0px 0px 1px white;
+}
+#fire {
+    color: #DD2100;
+    text-shadow: 0px 0px 1px white;
+}
+#ground {
+    color: #BF9926;
+    text-shadow: 0px 0px 1px white;
+}
+#fighting {
+    color: #A84D3D;
+    text-shadow: 0px 0px 1px white;
+}
